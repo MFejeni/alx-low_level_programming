@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	alpha = "abcdefghijklmnopqrstuvwxyz";
+	char alpha[26] = "abcdefghijklmnopqrstuvwxyz";
 	for (int i = 0; i < 26; i++)
 	{
 		putchar("%c", alpha[i]);
