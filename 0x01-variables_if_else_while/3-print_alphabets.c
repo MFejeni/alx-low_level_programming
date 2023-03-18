@@ -8,16 +8,18 @@
 
 int main(void)
 {
-	char alpha[26] = "abcdefghijklmnopqrstuvxyz";
-	char Alpha[26] = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+	char alpha = 'a';
+	char Alpha = 'A';
 
-	for (int i = 0; i < 26; i++)
+	while (alpha <= 'z')
 	{
-		putchar("%c", alpha[i]);
+		putchar(alpha);
+		alpha++;
 	}
-	for (int i = 0; i < 26; i++)
+	while (Alpha <= 'Z')
 	{
-		putchar("%c", Alpha[i]);
+		putchar(Alpha);
+		Alpha++;
 	}
-	putchar("\n");
+	putchar('\n');
 }
