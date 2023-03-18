@@ -23,4 +23,5 @@ int main(void)
 		}
 	}
 	putchar(alpha);
+	return (0);
 }
