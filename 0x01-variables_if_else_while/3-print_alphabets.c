@@ -3,7 +3,7 @@
 /**
  * main - prints lower alphabets first then upper case alphabets
  *
- * Return s 0
+ * Return:  0 for success
  */
 
 int main(void)
@@ -13,8 +13,7 @@ int main(void)
 
 	while (alpha <= 'z')
 	{
-		putchar(alpha);
-		alpha++;
+		putchar(alpha++);
 	}
 	while (Alpha <= 'Z')
 	{

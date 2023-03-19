@@ -3,7 +3,7 @@
 /**
  * main - prints numbers of single digit ( less than 10)
  *
- * Returns 0 for success
+ * Return: 0 for success
  */
 
 int main(void)

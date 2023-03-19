@@ -3,7 +3,7 @@
 /**
  * main - prints alphabets without e and q
  *
- * Return: 0
+ * Return: 0 for success
  */
 
 int main(void)
