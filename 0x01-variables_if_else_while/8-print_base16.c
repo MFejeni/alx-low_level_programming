@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints positive numbers less than 10 using putchar
+ * main - prints all base 16 numbers and letters
  *
  * Return: 0 for success
  */
@@ -10,10 +10,9 @@ int main(void)
 {
 	char num = '0';
 
-	while (num < 10)
+	while (num <= 'f')
 	{
-		putchar(num);
-		num++;
+		putchar(num++);
 	}
 	putchar('\n');
 	return (0);
