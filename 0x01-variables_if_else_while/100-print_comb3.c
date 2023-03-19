@@ -26,7 +26,9 @@ int main(void)
 					putchar(' ');
 				}
 			}
+			units++;
 		}
+		tenth++;
 	}
 	putchar('\n');
 	return (0);
