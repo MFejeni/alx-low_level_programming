@@ -9,7 +9,6 @@
 int main(void)
 {
 	int tenth = 48;
-	// int units = 49;
 
 	while (tenth <= 56)
 	{
