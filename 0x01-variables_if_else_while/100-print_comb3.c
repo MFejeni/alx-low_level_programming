@@ -9,10 +9,12 @@
 int main(void)
 {
 	int tenth = 48;
-	int units = 49;
+	// int units = 49;
 
 	while (tenth <= 56)
 	{
+		int units = 49;
+
 		while (units <= 57)
 		{
 			if (units > tenth)
