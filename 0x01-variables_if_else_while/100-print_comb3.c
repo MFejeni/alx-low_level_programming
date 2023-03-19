@@ -21,7 +21,7 @@ int main(void)
 				putchar(tenth);
 				putchar(units);
 
-				if (tenth != 56 && units != 57)
+				if (tenth != 56 || units != 57)
 				{
 					putchar(',');
 					putchar(' ');
