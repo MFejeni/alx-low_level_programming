@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints positive numbers less than 10 using putchar
+ * main - prints numbers separated with a comma
  *
  * Return: 0 for success
  */
@@ -10,11 +10,11 @@ int main(void)
 {
 	int num = 0;
 
-	while (num < 10)
+	while (num < 9)
 	{
 		putchar(num);
-		num++;
+		putchar(', ');
 	}
-	putchar('\n');
+	putchar('9\n');
 	return (0);
 }

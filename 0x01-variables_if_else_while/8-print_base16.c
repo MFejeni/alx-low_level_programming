@@ -9,10 +9,15 @@
 int main(void)
 {
 	char num = '0';
+	char alpha = 'a';
 
-	while (num <= 'f')
+	while (num <= '9')
 	{
 		putchar(num++);
+	}
+	while (alpha <= 'f')
+	{
+		putchar(alpha++);
 	}
 	putchar('\n');
 	return (0);
