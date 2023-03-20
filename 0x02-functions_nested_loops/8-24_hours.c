@@ -7,38 +7,41 @@
 void jack_bauer(void)
 {
 	int hour, hourUnit, minTenth, minUnit;
-	for (hour = 48; hour <= 50; hour++)
+
+	for (hour = 0; hour <= 2; hour++)
 	{
-		if (hour != 50)
+		if (hour != 2)
 		{
-			for (hourUnit = 48; hourUnit <= 57; hourUnit++)
+			for (hourUnit = 0; hourUnit <= 9; hourUnit++)
 			{
-				for (minTenth = 48; minTenth <= 53; minTenth++)
+				for (minTenth = 0; minTenth <= 5; minTenth++)
 				{
-					for (minUnit = 48; minUnit <= 57; minUnit++)
+					for (minUnit = 0; minUnit <= 9; minUnit++)
 					{
 						_putchar(hour);
 						_putchar(hourUnit);
 						_putchar(':');
 						_putchar(minTenth);
 						_putchar(minUnit);
+						_putchar('\n');
 					}
 				}
 			}
 		}
 		else
 		{
-			for (hourUnit = 48; hourUnit <= 52; hourUnit++)
+			for (hourUnit = 0; hourUnit <= 4; hourUnit++)
 			{
-				for (minTenth = 48; minTenth <= 53; minTenth++)
+				for (minTenth = 0; minTenth <= 5; minTenth++)
 				{
-					for (minUnit = 48; minUnit <= 57; minUnit++)
+					for (minUnit = 0; minUnit <= 9; minUnit++)
 					{
 						_putchar(hour);
 						_putchar(hourUnit);
 						_putchar(':');
 						_putchar(minTenth);
 						_putchar(minUnit);
+						_putchar('\n')
 					}
 				}
 			}
