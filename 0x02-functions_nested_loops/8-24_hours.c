@@ -11,7 +11,7 @@ void jack_bauer(void)
 	{
 		if (hour != 50)
 		{
-			for (hourUnit = 48; hourUnit <= 57; hourUnit)
+			for (hourUnit = 48; hourUnit <= 57; hourUnit++)
 			{
 				for (minTenth = 48; minTenth <= 53; minTenth++)
 				{
@@ -28,7 +28,7 @@ void jack_bauer(void)
 		}
 		else
 		{
-			for (hourUnit = 48; hourUnit <= 52; hourUnit)
+			for (hourUnit = 48; hourUnit <= 52; hourUnit++)
 			{
 				for (minTenth = 48; minTenth <= 53; minTenth++)
 				{
