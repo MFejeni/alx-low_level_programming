@@ -2,6 +2,8 @@
 
 /**
  * jack_bauer - prints the time from 00:00 to 23:59
+ *
+ *void
  */
 
 void jack_bauer(void)
@@ -18,11 +20,11 @@ void jack_bauer(void)
 				{
 					for (minUnit = 0; minUnit <= 9; minUnit++)
 					{
-						_putchar(hour);
-						_putchar(hourUnit);
+						_putchar(hour + 48);
+						_putchar(hourUnit + 48);
 						_putchar(':');
-						_putchar(minTenth);
-						_putchar(minUnit);
+						_putchar(minTenth + 48);
+						_putchar(minUnit + 48);
 						_putchar('\n');
 					}
 				}
@@ -30,21 +32,29 @@ void jack_bauer(void)
 		}
 		else
 		{
-			for (hourUnit = 0; hourUnit <= 4; hourUnit++)
+			hour2();
+		}
+	}
+}
+/*
+void hour2(void)
+{
+	int hourUnit, minTenth, minUnit;
+
+	for (hourUnit = 0; hourUnit <= 4; hourUnit++)
+	{
+		for (minTenth = 0; minTenth <= 5; minTenth++)
+		{
+			for (minUnit = 0; minUnit <= 9; minUnit++)
 			{
-				for (minTenth = 0; minTenth <= 5; minTenth++)
-				{
-					for (minUnit = 0; minUnit <= 9; minUnit++)
-					{
-						_putchar(hour);
-						_putchar(hourUnit);
-						_putchar(':');
-						_putchar(minTenth);
-						_putchar(minUnit);
-						_putchar('\n')
-					}
-				}
+				_putchar(hour + 48);
+				_putchar(hourUnit + 48);
+				_putchar(':');
+				_putchar(minTenth + 48);
+				_putchar(minUnit + 48);
+				_putchar('\n')
 			}
 		}
 	}
 }
+*/

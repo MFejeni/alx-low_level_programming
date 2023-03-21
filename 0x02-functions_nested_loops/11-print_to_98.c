@@ -16,13 +16,13 @@ void print_to_98(int n)
 		{
 			if (i != 98)
 			{
-				_putchar(i);
+				putchar_digit(i);
 				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
-				_putchar(i);
+				putchar_digit(i);
 				_putchar('\n');
 			}
 		}
@@ -33,13 +33,13 @@ void print_to_98(int n)
 		{
 			if (i != 98)
 			{
-				_putchar(i);
+				putchar_digit(i);
 				_putchar(',');
-				_putchar('\n');
+				_putchar(' ');
 			}
 			else
 			{
-				_putchar(i);
+				putchar_digit(i);
 				_putchar('\n');
 			}
 		}
