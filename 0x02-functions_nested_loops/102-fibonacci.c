@@ -7,12 +7,14 @@
 
 int main(void)
 {
-	int fib0, fib1, fib2, i;
+	long int fib0, fib1, fib2;
+       
+	int i;
 
 	fib1 = 1;
 	fib2 = 2;
 	fib0 = 0;
-	printf("%d", fib1);
+	printf("%d, ", fib1);
 	for (i = 1; i <= 50; i++)
 	{
 		printf("%d, ", fib2);
