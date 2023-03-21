@@ -18,10 +18,7 @@ void print_times_table(int n)
 			{
 				if (col != n)
 				{
-					printf("%d,", row * col);
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					printf("%d,   ", row * col);
 				}
 				else
 				{
