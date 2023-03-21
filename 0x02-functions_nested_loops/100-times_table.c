@@ -23,14 +23,11 @@ void print_times_table(int n)
 			{
 				if (col != n)
 				{
-					_putchar_digit(row * col);
-					_putchar(',');
-					_putchar(' ');
+					printf("%d,   ", row * col);
 				}
 				else
 				{
-					putchar_digit(row * col);
-					_putchar('\n');
+					printf("%d\n", row * col);
 				}
 			}
 		}
