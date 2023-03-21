@@ -11,19 +11,22 @@ void times_table(void)
 
 	for (row = 0; row <= 9; row++)
 	{
+		_putchar(48);
 		for (col = 0; col <= 9; col++)
 		{
-			if (col != 9)
+			_putchar(',');
+			_putchar(' ');
+			product = row * col
+			if (col <= 9)
 			{
-				putchar_digit(row * col);
-				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
-				putchar_digit(row * col);
-				_putchar('\n');
+				_putchar((product / 10) + 48);
 			}
+			_putchar((product % 10) + 48);
 		}
+		_putchar('\n');
 	}
 }

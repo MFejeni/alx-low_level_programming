@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - prints from number from parameter to 98
@@ -16,13 +17,13 @@ void print_to_98(int n)
 		{
 			if (i != 98)
 			{
-				putchar_digit(i);
+				printf("%d", i);
 				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
-				putchar_digit(i);
+				printf("%d", i);
 				_putchar('\n');
 			}
 		}
@@ -33,13 +34,13 @@ void print_to_98(int n)
 		{
 			if (i != 98)
 			{
-				putchar_digit(i);
+				printf("%d", i);
 				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
-				putchar_digit(i);
+				printf("%d", i);
 				_putchar('\n');
 			}
 		}
