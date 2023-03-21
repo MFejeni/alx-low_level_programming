@@ -8,14 +8,14 @@
 int main(void)
 {
 	long int fib0, fib1, fib2;
-       
+
 	int i;
 
 	fib1 = 1;
 	fib2 = 2;
 	fib0 = 0;
 	printf("%lu, ", fib1);
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i < 50; i++)
 	{
 		printf("%lu, ", fib2);
 		fib0 = fib2;
