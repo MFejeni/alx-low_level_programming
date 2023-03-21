@@ -17,10 +17,17 @@ int main(void)
 	printf("%lu, ", fib1);
 	for (i = 1; i < 50; i++)
 	{
-		printf("%lu, ", fib2);
-		fib0 = fib2;
-		fib2 = fib1 + fib2;
-		fib1 = fib0;
+		if (i != 49)
+		{
+			printf("%lu, ", fib2);
+			fib0 = fib2;
+			fib2 = fib1 + fib2;
+			fib1 = fib0;
+		}
+		else
+		{
+			printf("%lu", fib2);
+		}
 	}
 	putchar('\n');
 	return (0);
