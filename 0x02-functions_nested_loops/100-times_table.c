@@ -10,8 +10,7 @@ void print_times_table(int n)
 {
 	if (n < 0 || n > 15)
 	{
-		_putchar('N');
-		_putchar('O');
+		_putchar();
 	}
 	else
 	{
@@ -23,7 +22,7 @@ void print_times_table(int n)
 			{
 				if (col != n)
 				{
-					printf("%d,   ", row * col);
+					printf("%d,\t", row * col);
 				}
 				else
 				{
