@@ -17,16 +17,18 @@ void print_remaining_days(int month, int day, int year)
 	{
 		if (month % 2 == 0 && month != 2 && month <= 7)
 		{
-			days += 31;
+			days += 30;
 		}
 		else if (month % 2 == 0 && month >= 8)
 			days += 31;
+		else if(month % 2 != 0 && month >= 8)
+			days += 30;
 		else if (year % 4 == 0 && month == 2)
 			days += 29;
 		else if (month == 2)
 			days += 28;
 		else
-			days += 30;
+			days += 31;
 	}
 	printf("Day of the year: %d", day);
 	printf("Remaining days: %d", days);
