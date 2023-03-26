@@ -8,6 +8,9 @@ int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
 void _putchar(int c);
+void print_most_numbers(void);
+void put_digit(int num);
+void more_numbers(void);
 
 
 #endif
