@@ -20,6 +20,6 @@ void rev_string(char *s)
 		a = s[i];
 		b = s[strlen];
 		s[i] = b;
-		s[sL--] = a;
+		s[strlen--] = a;
 	}
 }
