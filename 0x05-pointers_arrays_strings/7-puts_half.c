@@ -10,7 +10,7 @@ void puts_half(char *str)
 {
 	int sLen, strlen, i;
 
-	strlen = 0;
+	strlen = 1;
 	while (str[strlen] != '\0')
 		strlen++;
 
@@ -19,7 +19,7 @@ void puts_half(char *str)
 	else
 		sLen = (strlen - 1) / 2;
 
-	for (i = sLen + 1; i < strlen; i++)
+	for (i = sLen; i < strlen; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
