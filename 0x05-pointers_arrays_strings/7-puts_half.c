@@ -10,12 +10,12 @@ void puts_half(char *str)
 {
 	int sLen, strlen, i;
 
-	strlen = 1;
+	strlen = 0;
 	while (str[strlen] != '\0')
 		strlen++;
 
 	if (strlen % 2 == 0)
-		sLen = strlen / 2;
+		sLen = (strlen / 2) + 1;
 	else
 		sLen = (strlen - 1) / 2;
 
