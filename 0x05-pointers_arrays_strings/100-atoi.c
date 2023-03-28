@@ -9,7 +9,6 @@
 int _atoi(char *s)
 {
 	int i, strlen, result;
-	char *str;
 
 	strlen = 0;
 	result = 0;
