@@ -12,6 +12,7 @@ int _islower(char c);
 char change_toupper(char c);
 char *string_toupper(char *s);
 int main(void);
+int _putchar(char c);
 
 
 

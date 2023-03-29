@@ -9,18 +9,10 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int sum1 = 0, sum2 = 0, i, strlen;
+	int strlen;
 
 	strlen = 0;
-	while (s1[strlen] != '\0')
+	while (s1[strlen] == s2[strlen] && s1[strlen] != '\0')
 		strlen++;
-	for (i = 0; i <= strlen; i++)
-		sum1 += s1[i];
-
-	strlen = 0;
-	while (s2[strlen] != '\0')
-		strlen++;
-	for (i = 0; i <= strlen; i++)
-		sum2 += s2[i];
-	return (sum1 - sum2);
+	return (s1[strlen] - s2[strlen]);
 }
