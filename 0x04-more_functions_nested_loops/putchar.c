@@ -6,7 +6,7 @@
  * void
  */
 
-void _putchar(char c)
+void _putchar(int c)
 {
 	return (write(1, &c, 1));
 }
