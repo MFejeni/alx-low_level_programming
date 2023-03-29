@@ -2,14 +2,15 @@
 #include <stdio.h>
 
 /**
- * main - prints fizz if number is divisible by 3, buzz if number is 
+ * main - prints fizz if number is divisible by 3, buzz if number is
  * divisible by 5, fizzbuzz if number is divisible by 3 and 5, number otherwise
- * void
+ * Return: 0 for success
  */
 
-void main(void)
+int main(void)
 {
 	int i;
+
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 != 0 && i != 100)
@@ -21,6 +22,8 @@ void main(void)
 		else if (i != 100)
 			printf("%d ", i);
 		else
-			printf("%d", i);
+			printf("Buzz");
 	}
+	printf("\n");
+	return (0);
 }
