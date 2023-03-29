@@ -22,4 +22,5 @@ int _strcmp(char *s1, char *s2)
 		strlen++;
 	for (i = 0; i <= strlen; i++)
 		sum2 += s2[i];
+	return (sum1 - sum2);
 }
