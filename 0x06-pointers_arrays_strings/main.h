@@ -8,6 +8,9 @@ char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
+bool _islower(char c);
+char change_toupper(char c);
+char *string_toupper(char *s);
 
 
 
