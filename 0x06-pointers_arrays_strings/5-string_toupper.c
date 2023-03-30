@@ -15,9 +15,10 @@ char *string_toupper(char *s)
 		strlen++;
 	for (i = 0; i <= strlen; i++)
 	{
-		if (_islower(s[i]))
+		if (_islower(s[i]) == 1)
 			s[i] = change_toupper(s[i]);
 	}
+	return (s);
 }
 
 /**
@@ -26,9 +27,12 @@ char *string_toupper(char *s)
  * Return: True if is lower, fasle otherwise
  */
 
-bool _islower(char c)
+int _islower(char c)
 {
-	return ((c >= 'a' && c <= 'z'));
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
 
 /**
@@ -42,10 +46,11 @@ char change_toupper(char c)
 	char lcase[] = "abcdefghijklmnopqrstuvxyz";
 	char ucase[] = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
 	int i;
-	
+
 	for (i = 0; i < 26; i++)
 	{
 		if (lcase[i] == c)
-			return (ucase[i]);
+			c = ucase[i];
 	}
+	return (c);
 }
