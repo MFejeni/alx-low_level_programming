@@ -8,11 +8,13 @@
 
 int is_sep(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == ',' || c == ';')
-	       return (1);
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
 	else if (c == '.' || c == '!' || c == '?' || c == '"')
-	       return (1);
-	else if (c == '(' || c == ')' || c == '{'|| c == '}')
+		return (1);
+	else if (c == '(' || c == ')' || c == '{' || c == '}')
+		return (1);
+	else if (c == ';' || c == ',')
 		return (1);
 	else
 		return (0);
@@ -31,14 +33,32 @@ char *cap_string(char *s)
 	strlen = 0;
 	while (s[strlen] != '\0')
 		strlen++;
-	for (i = 0; i < strlen && s[strlen + 1] != '\0'; i++)
+	for (i = 0; i < strlen; i++)
 	{
 		if (i == 0)
 			s[i] = change_toupper(s[i]);
 		else if (is_sep(s[i]) == 1)
 			s[i + 1] = change_toupper(s[i]);
-		else
-			s[i] = s[i];
 	}
 	return (s);
+}
+
+/**
+ * change_toupper - capital
+ * @c: char
+ * Return: capital
+ */
+
+char change_toupper(char c)
+{
+	char *lcase = "abcdefghijklmnopqrstuvxyz";
+	char *ucase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		if (c == lcase[i])
+			c = ucase[i];
+	}
+	return (c);
 }
