@@ -8,13 +8,9 @@
 
 int is_sep(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n')
-		return (1);
-	else if (c == '.' || c == '!' || c == '?' || c == '"')
-		return (1);
-	else if (c == '(' || c == ')' || c == '{' || c == '}')
-		return (1);
-	else if (c == ';' || c == ',')
+	if (c == ' ' || c == '\t' || c == '\n' || c == '.' || c == '!' ||
+		c == '?' || c == '"' || c == '(' || c == ')' || c == '{' ||
+		c == '}' || c == ';' || c == ',')
 		return (1);
 	else
 		return (0);
@@ -28,17 +24,16 @@ int is_sep(char c)
 
 char *cap_string(char *s)
 {
-	int strlen, i;
+	int strlen;
 
 	strlen = 0;
 	while (s[strlen] != '\0')
-		strlen++;
-	for (i = 0; i < strlen; i++)
 	{
-		if (i == 0)
-			s[i] = change_toupper(s[i]);
-		else if (is_sep(s[i]) == 1)
-			s[i + 1] = change_toupper(s[i]);
+		if (strlen == 0)
+			s[strlen] = change_toupper(s[strlen]);
+		else if (is_sep(s[strlen]) == 1 && s[strlen + 1] != '\0')
+			s[strlen + 1] = change_toupper(s[strlen + 1]);
+		strlen++;
 	}
 	return (s);
 }
@@ -51,14 +46,7 @@ char *cap_string(char *s)
 
 char change_toupper(char c)
 {
-	char *lcase = "abcdefghijklmnopqrstuvxyz";
-	char *ucase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-	int i;
-
-	for (i = 0; i < 26; i++)
-	{
-		if (c == lcase[i])
-			c = ucase[i];
-	}
+	if(c >= 97 && c <= 122)
+		c = c - 32;
 	return (c);
 }
