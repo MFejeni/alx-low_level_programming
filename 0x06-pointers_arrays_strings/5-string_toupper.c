@@ -22,7 +22,7 @@ char *string_toupper(char *s)
 }
 
 /**
- * _isupper - returns true if letter is lower case
+ * _islower - returns true if letter is lower case
  * @c: letter to check
  * Return: True if is lower, fasle otherwise
  */
