@@ -24,7 +24,7 @@ int root_det(int x, int y)
 
 	sqrt = y * y;
 	if (sqrt == x)
-		return (sqrt);
+		return (y);
 	if (sqrt > x)
 		return (-1);
 	return (root_det(x, y + 1));
