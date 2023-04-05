@@ -8,13 +8,24 @@
 
 int _sqrt_recursion(int n)
 {
+	roor_det(n, 1);
+}
+
+/**
+ * root_det - determines the root
+ * @x: n
+ * @y: to be recursive
+ * Return: square root if it has, -1 otherwise
+ */
+
+int root_det(int x, int y)
+{
 	int sqrt;
 
-	sqrt = n - 1;
-	if (sqrt * sqrt == n)
+	sqrt = y * y;
+	if (sqrt == x)
 		return (sqrt);
-	else if (n >= 0)
-		return (_sqrt_recursion(n - 1));
-	else
+	if (sqrt > x)
 		return (-1);
+	return (root_det(x, y + 1));
 }
