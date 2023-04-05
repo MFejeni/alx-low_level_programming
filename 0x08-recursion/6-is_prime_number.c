@@ -10,11 +10,12 @@ int is_prime_number(int n)
 {
 	int num = 2;
 
-	while (n >= num)
+	if (n >= num)
 	{
 		if (n % num == 0)
 			return (0);
 		num++;
 	}
+	is_prime_number(n - 1);
 	return (1);
 }

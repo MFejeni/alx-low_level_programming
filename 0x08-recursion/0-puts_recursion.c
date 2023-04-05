@@ -13,7 +13,7 @@ void _puts_recursion(char *s)
 	strlen = 0;
 	if (s[strlen] != '\0')
 	{
-		_putchar(_puts_recursion(s[strlen++]));
+		_putchar(_puts_recursion(s - s[strlen++]));
 	}
 	_putchar('\n');
 }
