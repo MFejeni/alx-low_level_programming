@@ -29,5 +29,5 @@ int prime_number(int x, int y)
 		return (1);
 	if (x % y == 0)
 		return (0);
-	prime_number(x, y + 1);
+	return (prime_number(x, y + 1));
 }
