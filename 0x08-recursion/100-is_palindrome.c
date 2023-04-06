@@ -25,10 +25,10 @@ int _strlen_recursion(char *s)
 
 int _is_palindrome(char *s, int l, int r)
 {
-	if (s[l] == s[r] || l == r)
-		return (1);
-	else if (l > r)
+	if (s[l] != s[r])
 		return (0);
+	else if (l >= r)
+		return (1);
 	else
 		return (_is_palindrome(s, l + 1, r - 1));
 }
