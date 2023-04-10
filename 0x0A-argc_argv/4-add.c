@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - adds all positive numbers
@@ -9,43 +11,26 @@
 
 int main(int argc, char *argv[])
 {
-	int i, addition, j;
-	char err[] = "Error";
+	int i, addition;
 
 	if (argc == 1)
 	{
-		_putchar(48);
-		_putchar('\n');
+		printf("0\n");
 	}
 	else
 	{
 		addition = 0;
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; j < argv[i]; j++)
+			if (!atoi(argv[i]))
 			{
-				if (_isdigit(argv[i][j]) == 1)
-					addition += arg[i];
-				else
-				{
-					_putchar('E');
-					_putchar('r');
-					_putchar('r');
-					_putchar('o');
-					_putchar('r');
-					_putchar('\n');
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
+			else
+				addition += atoi(argv[i]);
 		}
-		if (addition > 999)
-			_putchar((addition / 1000) + 48);
-		if (addition > 99)
-			_putchar((addition / 100) + 48);
-		if (addition > 9)
-			_putchar((addition / 10) + 48);
-		_putchar((addition % 10) + 48);
-		_putchar('\n');
+		printf("%i\n", addition);
 	}
 	return (0);
 }
