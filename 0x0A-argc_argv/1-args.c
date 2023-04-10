@@ -9,8 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	scanf(argv);
-	printf("%i",argc);
-	_putchar('\n');
+
+	printf("%i\n",argc - 1);
+
 	return (0);
 }

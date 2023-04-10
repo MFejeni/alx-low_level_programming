@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - programme that prints multiplication
  * @argc: number of arguments of programmes
@@ -9,23 +10,14 @@
 
 int main(int argc, char *argv[])
 {
-	char err[] = "Error";
-	int i, mul;
-
-	if (argc != 2)
+	if (argc != 3)
 	{
-		for (i = 0; i < 5; i++)
-			_putchar(arr[i]);
-		_putchar('\n');
+		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		mul = argv[1] * argv[2];
-		if (mul > 9 || mul < -9)
-			_putchar((mul / 10) + 48);
-		_putchar((mul % 10) + 48);
-		_putchar('\n');
+		printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
 		return (0);
 	}
 }
