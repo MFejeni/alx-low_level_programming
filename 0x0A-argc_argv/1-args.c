@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - prints number of argurment
  * @argc: argurments to be print
@@ -7,8 +7,9 @@
  * Return: 0 for sucess
  */
 
-int main(int argc)
+int main(int argc, char *argv[])
 {
+	scanf(argv);
 	printf("%i",argc);
 	_putchar('\n');
 	return (0);
