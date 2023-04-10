@@ -4,13 +4,12 @@
  * main - prints number of argurment
  * @argc: argurments to be print
  * @argv: argurments to count from
- * void
+ * Return: 0 for sucess
  */
 
-void main(int argc, char *argv[])
+int main(int argc)
 {
-	if (argc > 9)
-		_putchar((argc / 10) + 48);
-	_putchar((argc % 10) + 48);
+	printf("%i",argc);
 	_putchar('\n');
+	return (0);
 }
