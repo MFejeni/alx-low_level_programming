@@ -1,0 +1,1 @@
+when calling functions and when using variables, memory allocations are needed for those variablres and that memory need to be freed after use, using malloc and free can help to manupulate memory allocations and free them after use.
