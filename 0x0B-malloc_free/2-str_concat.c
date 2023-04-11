@@ -18,6 +18,11 @@ char *str_concat(char *s1, char *s2)
 		result[i] = s1[i];
 	for (j = 0;s2[j] != '\0'; j++)
 		result[i++] = s2[j];
-	return (result);
+	if (s1 == NULL)
+		return (s2);
+	else if (s2 == NULL)
+		return (s1);
+	else
+		return (result);
 	free(result);
 }
