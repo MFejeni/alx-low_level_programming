@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int result, chg;
+	int chg;
 
 	if (argc != 2)
 	{
@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	if (chg < 0)
 		printf("0\n");
 	printf("%d\n", change(chg));
+	return (0);
 }
 
 /**
@@ -32,12 +33,17 @@ int main(int argc, char *argv[])
 
 int change(int mny)
 {
-	int chg[5] = [25, 10, 5, 2, 1];
+	int chg[5];
 	int i, res = 0;
 
+	chg[0] = 25;
+	chg[1] = 10;
+	chg[2] = 5;
+	chg[3] = 2;
+	chg[4] = 1;
 	for (i = 0; i < 5; i++)
 	{
-		if (chg[i] >= mny)
+		if (mny >= chg[i])
 		{
 			res += mny / chg[i];
 			mny = mny % chg[i];
