@@ -6,7 +6,7 @@
  * @ptr: pointer previously allocated
  * @old_size: old size of a memory
  * @new_size: new size of a memory
- * Retur: NULL if function fails, otherwise ptr
+ * Return: NULL if function fails, otherwise ptr
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
