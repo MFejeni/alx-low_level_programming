@@ -11,7 +11,7 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *locptr;
+	char *locptr, *cpyptr = ptr;
 	unsigned int i, j;
 
 	j = new_size;
@@ -33,7 +33,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size > old_size)
 		j = old_size;
 	for (i = 0; i < j; i++)
-		locptr[i] = ptr[i];
+		locptr[i] = cpyptr[i];
 	free(ptr);
 	return (locptr);
 }

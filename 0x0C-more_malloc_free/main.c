@@ -5,15 +5,15 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
+
 int main(void)
 {
-    int *concat;
-	int i;
-    concat = array_range(0, 10);
-    for ( i = 0; i < 10; i++)
-	    printf("%d\n", concat[i]);
-    free(concat);
+	char *p;
+
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+
     return (0);
 }
