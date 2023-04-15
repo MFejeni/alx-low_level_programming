@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	while (s1[i])
 	{
-		p[i] = s1[i];
+		strptr[i] = s1[i];
 		i++;
 	}
 
