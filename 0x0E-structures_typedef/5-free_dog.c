@@ -1,5 +1,6 @@
 #include "dog.h"
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * free_dog - frees the struct d (dog_t) parameter passed
@@ -9,5 +10,5 @@
 
 void free_dog(dog_t *d)
 {
-	free(*d);
+	free(d);
 }
