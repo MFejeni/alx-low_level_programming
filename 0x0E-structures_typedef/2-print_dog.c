@@ -1,5 +1,6 @@
-#include "main.h"
-#include <stdlib>
+#include "dog.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_dog - prints the details of struct dog passed as parameter
@@ -11,16 +12,13 @@ void print_dog(struct dog *d)
 {
 	if (d == NULL)
 		printf("(nil)\n");
-	if (d.name == NULL)
+	if (d -> name == NULL)
 		printf("name : (nil)\n");
 	else
-		printf("name : %s\n", d.name);
-	if (d.age == NULL)
-		printf("age : (nil)\n");
-	else
-		printf("age : %f\n", d.age);
-	if (d.owner == NULL)
+		printf("name : %s\n", d -> name);
+	printf("age : %f\n", d -> age);
+	if (d -> owner == NULL)
 		printf("owner : (nil)\n");
 	else
-		printf("owner : %s\n", d.owner);
+		printf("owner : %s\n", d -> owner);
 }
