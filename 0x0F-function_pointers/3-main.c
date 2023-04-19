@@ -13,18 +13,18 @@ int main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	if (argv[2] != ops_t.op)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 	if (argv[2] == "/" && atoi(argv[3]) == 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
-	printf("%d", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 }
