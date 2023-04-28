@@ -9,9 +9,16 @@
 
 size_t print_list(const list_t *h)
 {
-	if (h->str == NULL)
-		printf("[0] (nil)");
-	else if (h->str)
-		printf("[%u] %s", h->len, h->str);
-	return (1 + print_list(h->next));
+	int el_num = 0;
+
+	while (h)
+	{
+		if (h->str == NULL)
+			printf("[0} (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		el_num += 1;
+		h = h->next;
+	}
+	return (el_num);
 }
