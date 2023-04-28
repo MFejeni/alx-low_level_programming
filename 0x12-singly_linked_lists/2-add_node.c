@@ -3,14 +3,14 @@
 
 /**
  * add_node - adds a node at the begining of the linked list
- * @head: node to add
+ * @head: head of the list to be added in
  * @str: string of a node to be added
  * Return: address of the newly list with added node
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t new;
+	list_t *new;
 	unsigned int new_len;
 
 	new_len = 0;
