@@ -10,16 +10,24 @@
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *to_add;
+	listint_t *tmp_node;
 
-	while (head)
-		*head = *head->next;
-	if (!head)
+	tmp_node = *head;
+	to_add = malloc(sizeof(struct listint_s));
+	if (to_add == NULL)
+		return (NULL);
+
+	to_add->n = n;
+	to_add->next = NULL;
+
+	if (*head == NULL)
 	{
-		to_add = malloc(sizeof(struct listint_s));
-		if (to_add == NULL)
-			return (NULL);
-		to_add->n = n;
 		*head = to_add;
+		return (to_add);
 	}
-	return (*head);
+
+	while (tmp_node->next != NULL)
+		tmp_node = tmp_node->next;
+	tmp_node->next = to_add;
+	return (to_add);
 }
