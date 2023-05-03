@@ -9,17 +9,17 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	if (head)
+	listint_t *to_add;
+
+	while (head)
 		*head = *head->next;
 	if (!head)
 	{
-		listint_t *to_add;
-		to_add = malloc(sizeof(listint_s));
+		to_add = malloc(sizeof(struct listint_s));
 		if (to_add == NULL)
 			return (NULL);
 		to_add->n = n;
 		*head = to_add;
-		return (*head);
 	}
-	return (add_nodeint_end(*head, n));
+	return (*head);
 }
