@@ -8,16 +8,14 @@
 
 void print_binary(unsigned long int n)
 {
-	char str = "";
-
-	while (n > 0)
+	if (n == 0)
 	{
-		n %= 2;
-		strcat(str,string(n));
+		_putchar('0');
+		return;
 	}
-	for (i = 0; i < strlen(str); i++)
-		_putchar(str[i]);
-	_putchar('\n');
+	if ((n >> 1) != 0)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
 
 /**
@@ -30,3 +28,4 @@ int _putchar(char c)
 {
 	return (write(1, &c,  1));
 }
+
