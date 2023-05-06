@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -11,7 +12,7 @@ int _putchar(char c);
 int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
-unsinged int flip_bits(unsigned long int n, unsigned long int m);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 
 #endif
