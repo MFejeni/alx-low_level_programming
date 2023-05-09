@@ -7,7 +7,7 @@
  * Return: number of letters that are read and printed
  */
 
-ssize_t read_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int filecheck, read_num, write_num;
 	char *buffer;
@@ -22,7 +22,7 @@ ssize_t read_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 	read_num = read(filecheck, buffer, letters);
-	write_num = write(STOUT_FILENO, buffer, read_num);
+	write_num = write(STDOUT_FILENO, buffer, read_num);
 	close(filecheck);
 	free(buffer);
 	return (write_num);
