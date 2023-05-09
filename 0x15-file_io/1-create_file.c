@@ -11,6 +11,8 @@ int create_file(const char *filename, char *text_content)
 {
 	int filechech, write_num, len;
 
+	if (text_content == NULL)
+		text_content = "";
 	if (filename == NULL)
 		return (-1);
 
