@@ -7,16 +7,16 @@
  * @argv: arguments
  * void
  */
-void errors(int dest, int src, char *argv)
+void errors(int dest, int src, char *argv[])
 {
 	if (src == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[0]);
 		exit(98);
 	}
 	if (dest == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[0]);
 		exit(99);
 	}
 }
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	err = close(dest);
-	if (err_close == -1)
+	if (err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
